@@ -93,7 +93,7 @@ function catchErrorsWithParameter(fn) {
   // we have a unkown amount of arguments
   // rest operator to the rescue
   return function(...args) {
-    return fn(...args).catch(err => {
+    return fn(...args).catch(function(err) {
       console.error('catchErrors() catched an error', err);
     });
   }
